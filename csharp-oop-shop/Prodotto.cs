@@ -11,38 +11,25 @@ namespace csharp_oop_shop
         // ATTRIBUTI con eventuali GETTER e SETTER
         private int codice;
 
-        public int Codice
-        {
-            get;
-        }
+        public int Codice { get; }
 
         private string nome;
 
-        public string Nome
-        {
-            get; set;
-        }
+        public string Nome { get; set; }
 
         private string descrizione;
-        public string Descrizione
-        {
-            get; set;
-        }
+        public string Descrizione { get; set; }
 
-        private float prezzo;
-        public float Prezzo
-        {
-            get; set;
-        }
+        private double prezzo;
+
+        public double Prezzo { get; set; }
 
         private int iva;
-        public int Iva
-        {
-            get; set;
-        }
+
+        public int Iva { get; set; }
 
         // COSTRUTTORI
-        public Prodotto(string nome, string descrizione, float prezzo, int iva)
+        public Prodotto(string nome, string descrizione, double prezzo, int iva)
         {
             this.codice = GeneraCodiceRandom();
             this.nome = nome;   
@@ -66,8 +53,8 @@ namespace csharp_oop_shop
         // funzione che visualizza il prezzo base aggiunto di iva
         public string VisualizzaPrezzoPiuIva()
         {
-            float prezzoPiuIva = (this.Prezzo * this.Iva) / 100;
-            return prezzoPiuIva + " €";
+            double calcoloIva = (this.Prezzo * this.Iva) / 100;
+            return (this.Prezzo + calcoloIva) + " €";
         }
         // funzione che visualizza il nome esteso
         public string VisualizzaNomeEsteso()
