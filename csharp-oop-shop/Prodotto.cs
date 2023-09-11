@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace csharp_oop_shop
 {
-    internal class Prodotto
+    public class Prodotto
     {
         // ATTRIBUTI con eventuali GETTER e SETTER
 
@@ -31,7 +31,7 @@ namespace csharp_oop_shop
         }
 
         // METODI
-        // funzione che genera un numero da 100 a 99999999
+        // funzione che genera un numero da 1 a 99999999
         private int GeneraCodiceRandom()
         {
             Random randomNumber = new Random();
